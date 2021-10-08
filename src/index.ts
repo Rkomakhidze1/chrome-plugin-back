@@ -1,9 +1,12 @@
 import express from 'express';
 import axios from 'axios';
+import cors from 'cors';
 
 const app = express();
 
 const url = 'https://api.app.shortcut.com/api/v3/stories/search';
+
+app.use(cors());
 
 app.get('/test', async (req, res) => {
   const stories = await axios.post(
