@@ -5,21 +5,25 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "ts-node-dev -r dotenv/config src/index",
-    "start:prod": "tsc && node -r dotenv/config dist/index"
+    "start": "rimraf dist && tsc && node -r dotenv/config dist/index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/express": "^4.17.13",
     "ts-node-dev": "^1.1.8"
   },
   "dependencies": {
-    "@types/axios": "^0.14.0",
     "@types/cors": "^2.8.12",
     "axios": "^0.22.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }

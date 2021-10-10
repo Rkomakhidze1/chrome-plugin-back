@@ -22,7 +22,7 @@ app.get('/test', async (req, res) => {
   res.json(stories.data);
 });
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log('server listening on port 3001');
 });
 
