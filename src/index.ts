@@ -8,6 +8,8 @@ const url = 'https://api.app.shortcut.com/api/v3/stories/search';
 
 app.use(cors());
 
+app.get('/', (req, res) => res.json({ hello: 'world' }));
+
 app.get('/test', async (req, res) => {
   const stories = await axios.post(
     url,
